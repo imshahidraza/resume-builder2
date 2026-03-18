@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  color: #f0c060;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #f0c060;
+}
+
+/* Page container */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #1a1a2e;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #16213e;
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background: #f0c060;
+  color: #1a1a2e;
+}
+
+.btn-gold:hover {
+  background: #e0b050;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+.btn-success {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #219a52;
+}
+
+/* Form inputs */
+input, textarea, select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #f0c060;
+  box-shadow: 0 0 0 3px rgba(240,192,96,0.15);
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Warnings */
+.warning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-left: 4px solid #ffc107;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #856404;
+  margin-bottom: 0.8rem;
+}
+
+.error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-left: 4px solid #e74c3c;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #721c24;
+  margin-bottom: 0.8rem;
+}
+
+.success {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-left: 4px solid #27ae60;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #155724;
+  margin-bottom: 0.8rem;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0c060;
+}
+
+/* Timer */
+.timer {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.timer.expired {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timer-text {
+  font-size: 0.8rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.timer-count {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f0c060;
+}
+
+/* Analytics panel */
+.analytics-panel {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.analytics-item {
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.analytics-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0c060;
+}
+
+.analytics-label {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.2rem;
+}
+
+/* Last edited */
+.last-edited {
+  font-size: 0.78rem;
+  color: #888;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
