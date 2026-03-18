@@ -157,7 +157,6 @@ function Builder() {
         ...formData,
         skills: formData.skills.filter(s => s.trim() !== ''),
       };
-
       let res;
       if (resumeId) {
         res = await axios.put(`${API}/resume/${resumeId}`, payload);
@@ -273,7 +272,7 @@ function Builder() {
             <input
               value={formData.full_name}
               onChange={e => handleBasicChange('full_name', e.target.value)}
-              placeholder="John Doe"
+              placeholder="Kiran Kumar"
             />
             {formData.full_name && (
               <div className="warning">
@@ -285,7 +284,7 @@ function Builder() {
               type="email"
               value={formData.email}
               onChange={e => handleBasicChange('email', e.target.value)}
-              placeholder="john@example.com"
+              placeholder="kiran@gmail.com"
             />
             <label>Phone</label>
             <input
