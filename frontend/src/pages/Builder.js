@@ -5,7 +5,7 @@ import AnalyticsPanel from '../components/AnalyticsPanel';
 import ResumePreview from '../components/ResumePreview';
 import { findDuplicateSkills, autoCapitalize } from '../utils/helpers';
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://resume-builder-api-i14h.onrender.com';
 
 const emptyForm = {
   full_name: '',
