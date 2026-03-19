@@ -134,7 +134,10 @@ def generate_pdf(resume: models.Resume, password: Optional[str] = None) -> str:
 
     # Header
     story.append(Paragraph(data['full_name'], name_style))
-    story.append(Paragraph(f"{data['email']}  |  {data['phone']}", contact_style))
+    story.append(Spacer(1, 6))
+    story.append(Paragraph(data['email'], contact_style))
+    story.append(Paragraph(data['phone'], contact_style))
+    story.append(Spacer(1, 6))
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor('#1a1a2e')))
 
     # Summary
